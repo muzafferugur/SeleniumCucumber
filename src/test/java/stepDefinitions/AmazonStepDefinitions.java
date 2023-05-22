@@ -15,16 +15,16 @@ public class AmazonStepDefinitions {
 
     @Given("kullanici amazon anasayfasinda")
     public void kullanici_amazon_anasayfasinda() {
-        Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
+        Driver.getDriver().get(ConfigReader.getProperties("amazonUrl"));
     }
 
-    @Then("kullanici Nutella için arama yapar")
-    public void kullanici_nutella_için_arama_yapar() {
+    @Then("kullanici Nutella icin arama yapar")
+    public void kullanici_nutella_icin_arama_yapar() {
         amazonPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
     }
 
-    @Then("sonuclarin Nutella içerdiğini test eder")
-    public void sonuclarin_nutella_içerdiğini_test_eder() {
+    @Then("sonuclarin Nutella icerdigini test eder")
+    public void sonuclarin_nutella_icerdigini_test_eder() {
         String arananKelime = "Nutella";
         String actualAramaSonucStr = amazonPage.aramaSonucElementi.getText();
 
@@ -50,13 +50,13 @@ public class AmazonStepDefinitions {
 
     }
 
-    @And("kullanici iphone için arama yapar")
-    public void kullaniciIphoneIçinAramaYapar() {
+    @And("kullanici iphone icin arama yapar")
+    public void kullaniciIphoneIcinAramaYapar() {
         amazonPage.aramaKutusu.sendKeys("iphone" + Keys.ENTER);
     }
 
-    @Then("sonuclarin iphone içerdiğini test eder")
-    public void sonuclarinIphoneIçerdiğiniTestEder() {
+    @Then("sonuclarin iphone icerdigini test eder")
+    public void sonuclarinIphoneIcerdiginiTestEder() {
         String arananKelime = "iphone";
         String actualAramaSonucStr = amazonPage.aramaSonucElementi.getText();
 
