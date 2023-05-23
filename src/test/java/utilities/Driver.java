@@ -43,11 +43,6 @@ public class Driver {
                     driver = new EdgeDriver();
                     break;
 
-                case "headless-chrome":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
-                    break;
-
                 case "safari":
                     WebDriverManager.safaridriver().setup();
                     driver = new SafariDriver();
