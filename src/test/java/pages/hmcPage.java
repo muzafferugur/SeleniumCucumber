@@ -40,4 +40,5 @@ public class hmcPage {
 
     @FindBy(xpath = "//select[@class='form-control input-lg required']")
     public WebElement ddm;
+
 }

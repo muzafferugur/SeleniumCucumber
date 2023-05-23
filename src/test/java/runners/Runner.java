@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "stepDefinitions",
         tags =  "@hmc",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
-        dryRun = true
+        dryRun = false
 
 )
 
@@ -26,10 +26,8 @@ public class Runner {
     features: Runner dosyasının feature dosyalarını nereden bulacağını tarif eder.
     glue: step definitions dosyalarını nereden bulacağını tarif eder.
     tags: o an hangi tag'ı çalıştırmak istiyorsak onu belli eder.
-    dryRun: iki seçenek var
+    dryRun: iki seçenek var.
     ı.dryRun=true => yazdığımızda Testimizi çalıştırmadan sadece eksik adımları bize verir./sadeece kontrol eder eksik adım var mı yok mu, hiç bir şeyi çalıştırmaz
     ıı.dryRun=false => yazdığımızda Testlerimizi çalıştırır.
-
-
      */
 }
