@@ -1,4 +1,4 @@
-#amazon sayfasina gidip sirasiyla nutella, java, elma, amut aratip
+#amazon sayfasina gidip sirasiyla nutella, java, elma, armut aratip
   #sonuclarin arama yaptiğimiz kelimeyi icerdiğini test edelim
 
 Feature: US1007 kullanici amazonda istedigi kelimeleri aratir
@@ -7,12 +7,12 @@ Feature: US1007 kullanici amazonda istedigi kelimeleri aratir
 
     Given kullanici "amazonUrl" anasayfasinda
     Then kullanici "<istenenKelime>" icin arama yapar
-    And sonuclarin "<istenenKelime>" icerdigini test eder
+    And sonuclarin "<istenenKelimeKontrol>" icerdigini test eder
     And sayfayi kapatir
 
     Examples:
-      | istenenKelime |
-      | nutella       |
-      | java          |
-      | elma          |
-      | amut          |
+      | istenenKelime | istenenKelimeKontrol |
+      | nutella               | nutella                            |
+      | java                    | java                                 |
+      | elma                   | elma                                |
+      | armut                 | armut                              |

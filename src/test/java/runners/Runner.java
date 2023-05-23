@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags =  "@hmc",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
-        dryRun = false
+        tags =  "@datatable",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
+        dryRun = true
 
 )
 
