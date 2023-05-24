@@ -19,4 +19,7 @@ public class GuruPage {
 
     @FindBy(xpath = "//thead//tr//th")
     public List<WebElement> baslikListesi;
+
+    @FindBy(id = "gdpr-consent-notice")
+    public WebElement cookiesIFrame;
 }
