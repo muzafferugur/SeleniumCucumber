@@ -7,10 +7,19 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin = {
+                "pretty",//raporlarin daha okunakli olmasi icin
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failed_scenarios.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+        },
+        monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags =  "@datatable",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
-        dryRun = true
+        tags =  "@nutella",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
+        dryRun = false
 
 )
 

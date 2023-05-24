@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="12.15" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US1001 Kullanici Amazon Sayfasinda Arama Yapar" name="TC01 kullanici amazonda Nutella aratir" time="11.94">
+<system-out><![CDATA[
+Given kullanici amazon anasayfasinda........................................passed
+Then kullanici Nutella icin arama yapar.....................................passed
+And sonuclarin Nutella icerdigini test eder.................................passed
+And sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
