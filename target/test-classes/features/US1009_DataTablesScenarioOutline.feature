@@ -1,13 +1,11 @@
 Feature: US1009 Datatables sitesine 5 farkli giris yapalim
-  
-  #Feature File’i Parametre ile Kullanma
 
-  #Scenario Outline : ayni testte birden fazla datayi  kullanmamizi saglar
+    #Feature File’i Parametre ile Kullanma
 
-  #Bir liste kullanmak istedigimiz degeri "<value>"  seklinde yazariz
-
- # Daha sonra testin sonuna Example s: yazip ilk  satir olarak | value | yazariz ve altina kullanmak
- # istedigimiz degerleri ekleriz. (|elma|,|armut|…  gibi)
+  # Scenario Outline : ayni testte birden fazla datayi  kullanmamizi saglar
+  # Bir liste kullanmak istedigimiz degeri "<value>"  seklinde yazariz
+  # Daha sonra testin sonuna Examples: yazip ilk  satir olarak | value | yazariz ve altina kullanmak
+  # istedigimiz degerleri ekleriz. (|elma|,|armut|…  gibi)
 
 
   @datatable

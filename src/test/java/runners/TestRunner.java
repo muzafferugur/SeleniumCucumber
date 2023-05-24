@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
-                "pretty",//raporlarin daha okunakli olmasi icin
+                "pretty",//raporlarin daha okunaklı olmasi icin
                 "html:target/default-cucumber-reports.html",//raporlama  için gerekli plugin
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
@@ -18,12 +18,12 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags =  "@hmc",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
+        tags =  "@pr1",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
         dryRun = false
 
 )
 
-public class Runner {
+public class TestRunner {
     /*
     Bir framework'de bir tek Runner class'i yeterli olabilir.
     Runner class'inda class body'sinde hiç bir şey olmaz.

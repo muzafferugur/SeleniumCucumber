@@ -65,14 +65,12 @@
     </dependencies>
 
 
-
-
     <!--    PLUG INS-->
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
+                <artifactId>maven-failsafe-plugin</artifactId> <!--paralel test için-->
                 <version>3.0.0-M1</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
@@ -84,12 +82,12 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
+                <artifactId>maven-surefire-plugin</artifactId><!--paralel test için-->
                 <version>3.0.0-M1</version>
                 <configuration>
                     <parallel>classes</parallel>
                     <forkMode>perthread</forkMode>
-                    <threadCount>2</threadCount>
+                    <threadCount>2</threadCount><!--paralel test için kaç browser çalışştıracağı-->
                     <reuseForks>false</reuseForks>
                     <argLine>-Duser.language=en</argLine>
                     <argLine>-Xmx1024m</argLine>
@@ -129,9 +127,5 @@
             </plugin>
         </plugins>
     </build>
-
-
-
-
 
 </project>

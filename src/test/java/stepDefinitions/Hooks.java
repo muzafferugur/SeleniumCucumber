@@ -31,10 +31,6 @@ Hooks ve Screen Shot Ekleme
         azaltmamıza yardımcı olur.
      */
 
-    //Hooks her bir Scenario dan ya da Scenario Outline dan önce veya sonra çalışmasını istediğimiz metodlar içerir.
-    //@Before ve @After metotlarını içerir
-    //Raporlama işlemi ekran görüntüsüyle birlikte hooks yardımıyla yapılır.
-
     @Before
     public void setUpScenarios() {
         System.out.println("Before Methodu");

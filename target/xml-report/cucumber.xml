@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="5.972" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US1005 dogru kullanici adi ve sifre ile giris yapabilmeli" name="TC08 positive login test" time="5.768">
+<testsuite name="Cucumber" time="6.775" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="US1005 dogru kullanici adi ve sifre ile giris yapabilmeli" name="TC08 positive login test" time="6.559">
 <failure type="java.lang.NullPointerException" message="null value in entry: url=null">
 <![CDATA[java.lang.NullPointerException: null value in entry: url=null
 	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
