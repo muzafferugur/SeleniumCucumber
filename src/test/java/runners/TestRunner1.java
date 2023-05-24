@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags =  "@pr1",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
+        tags =  "@pr2",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
         dryRun = false
 
 )
