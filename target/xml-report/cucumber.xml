@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="12.15" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US1001 Kullanici Amazon Sayfasinda Arama Yapar" name="TC01 kullanici amazonda Nutella aratir" time="11.94">
+<testsuite name="Cucumber" time="5.972" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="US1005 dogru kullanici adi ve sifre ile giris yapabilmeli" name="TC08 positive login test" time="5.768">
+<failure type="java.lang.NullPointerException" message="null value in entry: url=null">
+<![CDATA[java.lang.NullPointerException: null value in entry: url=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
+	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:43)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:81)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:128)
+	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:191)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
+	at stepDefinitions.AmazonStepDefinitions.kullaniciAnasayfasinda(AmazonStepDefinitions.java:82)
+	at ✽.kullanici "hmcUrl" anasayfasinda(file:///C:/Users/muzaf/OneDrive/Masaüstü/SeleniumCucumber/src/test/resources/features/US1005_hotelmyCampPositiveLogin.feature:4)
+]]>
+</failure>
 <system-out><![CDATA[
-Given kullanici amazon anasayfasinda........................................passed
-Then kullanici Nutella icin arama yapar.....................................passed
-And sonuclarin Nutella icerdigini test eder.................................passed
-And sayfayi kapatir.........................................................passed
+Given kullanici "hmcUrl" anasayfasinda......................................failed
+Then Log in  yazisina tiklar................................................skipped
+And gecerli username girer..................................................skipped
+And gecerli password girer..................................................skipped
+And Login butonuna basar....................................................skipped
+Then sayfaya giris yaptigini kontrol eder...................................skipped
+And sayfayi kapatir.........................................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>

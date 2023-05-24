@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "pretty",//raporlarin daha okunakli olmasi icin
-                "html:target/default-cucumber-reports.html",
+                "html:target/default-cucumber-reports.html",//raporlama  için gerekli plugin
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failed_scenarios.txt",
@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags =  "@nutella",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
+        tags =  "@hmc",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
         dryRun = false
 
 )
