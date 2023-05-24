@@ -38,5 +38,20 @@ public class Runner {
     dryRun: iki seçenek var.
     ı.dryRun=true => yazdığımızda Testimizi çalıştırmadan sadece eksik adımları bize verir./sadeece kontrol eder eksik adım var mı yok mu, hiç bir şeyi çalıştırmaz
     ıı.dryRun=false => yazdığımızda Testlerimizi çalıştırır.
+
+Html Rapor Ekleme
+        ***Cucumber raporları, şirketlerin Cucumber kullanmasının ana nedenlerinden biridir.
+
+        **Html rapor almak icin runner classına eklenti(plugin) ekl ememiz yeterlidir.
+
+Yeni Raporlar Ekleme
+        ***Plugin ekleyerek yeni raporlar da olusturabiliriz
+
+        **Tester’lar icin onemli olan rapor Html olsa da json ve xml formatinda da rapor almak
+        mumkundur.
+
+        *Ayrica maven cucumber reporting plugin yuklemek istersek pom.xml’e plugin
+        ekleyebiliriz
+
      */
 }

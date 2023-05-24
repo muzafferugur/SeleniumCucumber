@@ -1,6 +1,16 @@
 @wip
 Feature: US1002 Kullanici ortak adimlari Background ile calistirir
 
+    #Background
+
+  #Farklı senaryoların başında ortak adımlarımız varsa:
+  #1. Feature file in basina Background oluşturun.
+  #2. Bu ortak adımları Background altına yazın.
+  #3. Background, aynı Feature file’ daki her Scenario dan önce çalışır
+  #4. Duplication olmadigindan emin olun.
+  #Background' un altındaki adımı yazdıktan sonra senaryolardan silin.
+
+
   Background: ortak adim
     Given kullanici amazon anasayfasinda
 

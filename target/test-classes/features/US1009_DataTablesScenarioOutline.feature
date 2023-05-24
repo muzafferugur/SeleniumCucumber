@@ -1,5 +1,16 @@
 Feature: US1009 Datatables sitesine 5 farkli giris yapalim
-@datatable
+  
+  #Feature File’i Parametre ile Kullanma
+
+  #Scenario Outline : ayni testte birden fazla datayi  kullanmamizi saglar
+
+  #Bir liste kullanmak istedigimiz degeri "<value>"  seklinde yazariz
+
+ # Daha sonra testin sonuna Example s: yazip ilk  satir olarak | value | yazariz ve altina kullanmak
+ # istedigimiz degerleri ekleriz. (|elma|,|armut|…  gibi)
+
+
+  @datatable
   Scenario Outline: TC14 kullanici 5 farkli kayit girisi yapabilmeli
 
   When kullanici "datatablesUrl" anasayfasinda
@@ -30,3 +41,4 @@ Feature: US1009 Datatables sitesine 5 farkli giris yapalim
     |Huseyin   |Kacmaz |BA          |berlin  |-                |2022-07-10|40000|
     |Fatih         |Sahin     |PO          |berlin  |-                |2022-03-12|45000|
     |Ahmet      |Kaya       |Tester    |ankara|database |2022-06-06|11000|
+

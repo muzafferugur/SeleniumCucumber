@@ -19,9 +19,10 @@ public class Hooks {
      package'i altında oluşturacağımız Hooks class'ına koyarız.
 
      Biz her scenariodan sonra test sonucunu kontrol edip failed olan scenariolar
-     için screenshoot alması amacıyla @After methodu kullanacağız.
+     için screenshot alması amacıyla @After methodu kullanacağız.
 
-        ***Cucumber hooks,senaryolardan önce veya sonra çalışan kod bloklarına sahip olan bir classtır.(Daha once
+Hooks ve Screen Shot Ekleme
+        ***Cucumber hooks, senaryolardan önce veya sonra çalışan kod bloklarına sahip olan bir classtır.(Daha once
         kullandigimiz TestBase gibi)
 
         **@Before ve @After annotation’ları kullanılarak kodları projemizde ve step definitionlarda kullanabiliriz.
@@ -41,7 +42,7 @@ public class Hooks {
 
     @After
     public void tearDownScenarios(Scenario scenario) {
-        System.out.println("After Metotu");
+        System.out.println("After Methodu");
         //Eger bir Scenario FAIL ederse, ekran görüntüsünü al ve rapora ekle
         if (scenario.isFailed()) {
             final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
