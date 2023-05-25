@@ -46,7 +46,8 @@ Hooks ve Screen Shot Ekleme
         if (scenario.isFailed()) {
             //ekran görüntüsü,          dosya tipi,          ekran görüntüsünün ismi
             scenario.attach(failedScreenshot, "image/png", "screenshots" + scenario.getName());
-            Driver.closeDriver();
+
         }
+        Driver.closeDriver();
     }
 }

@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.313" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="US1010 herokuapp Delete testi" name="TC15 herokuapp'dan delete butonu calismali" time="0.141">
-<failure/>
-<system-out><![CDATA[
-Given kullanici "herokuappUrl" anasayfasinda................................passed
-And add element butonuna basar..............................................undefined
-Then Delete butonu gorunur oluncaya kadar bekler............................skipped
-And Delete butonunun gorunur oldugunu test eder.............................skipped
-Then Delete butonuna basar..................................................skipped
-And Delete butonunun gorunmedigini test eder................................skipped
-And sayfayi kapatir.........................................................skipped
-]]></system-out>
+<testsuite name="Cucumber" time="0.36" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US1013 kullanici excel bilgilerine ulasir" name="TC18 kullanici excel bilgilerini kullanir" time="0.125">
 </testcase>
 </testsuite>
