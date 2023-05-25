@@ -48,19 +48,14 @@ public class ExcelStepDefinitions {
 
     @Then("Ulke sayisinin {int} oldugunu test eder")
     public void ulke_sayisinin_oldugunu_test_eder(Integer ulkeSayisi) {
-        int actualUlkeSayisi=workbook.getSheet("Sayfa1").getLastRowNum();
-        Assert.assertTrue(ulkeSayisi==actualUlkeSayisi);
+        int actualUlkeSayisi = workbook.getSheet("Sayfa1").getLastRowNum();
+        Assert.assertTrue(ulkeSayisi == actualUlkeSayisi);
     }
 
     @Then("Fiziki olarak kullanilan satir sayisinin {int} oldugunu test eder")
     public void fiziki_olarak_kullanilan_satir_sayisinin_oldugunu_test_eder(Integer fizikiKullanilanSatir) {
-        int actualFizikiKullanilanSatir=workbook.getSheet("Sayfa1").getPhysicalNumberOfRows();
-        Assert.assertTrue(fizikiKullanilanSatir==actualFizikiKullanilanSatir);
-    }
-
-    @Then("{int}. Satir ve {int}.sutundaki bilgiyi yazdirir")
-    public void satir_ve_sutundaki_bilgiyi_yazdirir(Integer int1, Integer int2) {
-
+        int actualFizikiKullanilanSatir = workbook.getSheet("Sayfa1").getPhysicalNumberOfRows();
+        Assert.assertTrue(fizikiKullanilanSatir == actualFizikiKullanilanSatir);
     }
 
 }
