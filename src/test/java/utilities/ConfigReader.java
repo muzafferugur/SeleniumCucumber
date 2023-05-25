@@ -1,40 +1,28 @@
 package utilities;
 
-import org.bouncycastle.util.Properties;
-
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
+    public static Properties properties;
 
-    public static Properties properties;//->obje oluşturduk
-
-    static {
-        String dosyaYolu = "configuration.properties";
-
-        //her seferinde class isminin yanına throws atmak yerine try-cathch kullanıyoruz.
+    static{
+        String dosyaYolu="configuration.properties";
 
         try {
-            FileInputStream fis = new FileInputStream(dosyaYolu);
-
-            //fis dosya yolunu tanımladığımız configuration.properties dosyasını okudu
-            properties = new Properties();//değer atadık
-            properties.load(fis);// FileInputStream in okuduğu değerleri propertiese yükledim
-
+            FileInputStream fis=new FileInputStream(dosyaYolu);
+            properties=new Properties();
+            properties.load(fis);
         } catch (IOException e) {
-            e.printStackTrace();
-
+            throw new RuntimeException(e);
         }
     }
 
-    public static String getProperties(String key) {
-
-        /*
-        test methodundan yolladığımız string key değerini alıp Properties classından getProperty() methodunu
-        kullanarak bu key'e ait value'yu bize getirdi.
-         */
+    public static String getProperty(String key){
 
         return properties.getProperty(key);
     }
+
 }

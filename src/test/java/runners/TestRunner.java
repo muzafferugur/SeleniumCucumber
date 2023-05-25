@@ -18,9 +18,8 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags =  "@pr1",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
+        tags =  "@aut",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
         dryRun = false
-
 )
 
 public class TestRunner {
@@ -52,6 +51,6 @@ Yeni Raporlar Ekleme
 
         *Ayrica maven cucumber reporting plugin yuklemek istersek pom.xml’e plugin
         ekleyebiliriz
-
      */
+
 }

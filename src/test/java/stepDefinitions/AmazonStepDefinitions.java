@@ -15,7 +15,7 @@ public class AmazonStepDefinitions {
 
     @Given("kullanici amazon anasayfasinda")
     public void kullanici_amazon_anasayfasinda() {
-        Driver.getDriver().get(ConfigReader.getProperties("amazonUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
     }
 
     @Then("kullanici Nutella icin arama yapar")
@@ -79,7 +79,7 @@ public class AmazonStepDefinitions {
 
     @Given("kullanici {string} anasayfasinda")//amazonUrl
     public void kullaniciAnasayfasinda(String istenenUrl) {
-        Driver.getDriver().get(ConfigReader.getProperties("istenenUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("istenenUrl"));
     }
 
     @And("url'in {string} icerdigini test eder")

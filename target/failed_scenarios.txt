@@ -1,1 +1,1 @@
-file:src/test/resources/features/US1005_hotelmyCampPositiveLogin.feature:3
+file:src/test/resources/features/US1012_AutomationPractice.feature:4

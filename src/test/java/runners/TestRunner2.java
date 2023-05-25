@@ -8,11 +8,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "pretty",//raporlarin daha okunaklı olmasi icin
-                "html:target/default-cucumber-reports.html",//raporlama  için gerekli plugin
-                "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failed_scenarios.txt",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                "html:target/default-cucumber-reports2.html",//raporlama  için gerekli plugin
+                "json:target/json-reports/cucumber2.json",
+                "junit:target/xml-report/cucumber2.xml",
+
         },
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",
@@ -21,5 +20,5 @@ import org.junit.runner.RunWith;
         dryRun = false
 
 )
-public class TestRunner1 {
+public class TestRunner2 {
 }

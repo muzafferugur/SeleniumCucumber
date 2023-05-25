@@ -16,12 +16,12 @@ public class hmcStepDefinitions {
 
     @Then("gecerli username girer")
     public void gecerli_username_girer() {
-        hmcPage.usernameKutusu.sendKeys(ConfigReader.getProperties("hmcValidUsername"));
+        hmcPage.usernameKutusu.sendKeys(ConfigReader.getProperty("hmcValidUsername"));
     }
 
     @Then("gecerli password girer")
     public void gecerli_password_girer() {
-        hmcPage.passwordKutusu.sendKeys(ConfigReader.getProperties("hmcValidPassword"));
+        hmcPage.passwordKutusu.sendKeys(ConfigReader.getProperty("hmcValidPassword"));
     }
 
     @Then("Login butonuna basar")
@@ -36,7 +36,7 @@ public class hmcStepDefinitions {
 
     @And("gecersiz password girer")
     public void gecersizPasswordGirer() {
-        hmcPage.passwordKutusu.sendKeys(ConfigReader.getProperties("hmcWrongPassword"));
+        hmcPage.passwordKutusu.sendKeys(ConfigReader.getProperty("hmcWrongPassword"));
     }
 
     @Then("sayfaya giris yapilamadigini test eder")
@@ -46,7 +46,7 @@ public class hmcStepDefinitions {
 
     @And("gecersiz username girer")
     public void gecersizUsernameGirer() {
-        hmcPage.usernameKutusu.sendKeys(ConfigReader.getProperties("hmcWrongUsername"));
+        hmcPage.usernameKutusu.sendKeys(ConfigReader.getProperty("hmcWrongUsername"));
     }
 
     @And("gecersiz username olarak {string} girer")

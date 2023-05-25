@@ -31,19 +31,21 @@ Hooks ve Screen Shot Ekleme
         azaltmamıza yardımcı olur.
      */
 
+    /*
     @Before
     public void setUpScenarios() {
         System.out.println("Before Methodu");
     }
 
+     */
     @After
     public void tearDownScenarios(Scenario scenario) {
-        System.out.println("After Methodu");
+
         //Eger bir Scenario FAIL ederse, ekran görüntüsünü al ve rapora ekle
+        final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
         if (scenario.isFailed()) {
-            final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             //ekran görüntüsü,          dosya tipi,          ekran görüntüsünün ismi
-            scenario.attach(failedScreenshot, "image/png", "failed_scenario" + scenario.getName());
+            scenario.attach(failedScreenshot, "image/png", "screenshots" + scenario.getName());
             Driver.closeDriver();
         }
     }
