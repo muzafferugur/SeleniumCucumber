@@ -18,8 +18,8 @@ import org.junit.runner.RunWith;
         monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags =  "@aut",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
-        dryRun = false
+        tags =  "@herokuapp",//ikisine aynı ismi verip iki scenarioyu da çalıştırabiliriz
+        dryRun = true
 )
 
 public class TestRunner {
