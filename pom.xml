@@ -9,10 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -87,7 +87,7 @@
                 <configuration>
                     <parallel>classes</parallel>
                     <forkMode>perthread</forkMode>
-                    <threadCount>2</threadCount><!--paralel test için kaç browser çalışştıracağı-->
+                    <threadCount>2</threadCount>
                     <reuseForks>false</reuseForks>
                     <argLine>-Duser.language=en</argLine>
                     <argLine>-Xmx1024m</argLine>
