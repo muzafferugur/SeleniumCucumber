@@ -18,7 +18,7 @@ public class Driver {
             switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
                     ChromeOptions options=new ChromeOptions();
-                    options.addArguments("--incognito");
+                    options.addArguments("--incognito");//gizli modda çalıştırır
                     options.addArguments("--ignore-certificate-errors");
                     options.addArguments("--allow-insecure-localhost");
                     options.addArguments("--acceptInsecureCerts");
@@ -26,7 +26,7 @@ public class Driver {
                     options.addArguments("--disable-blink-features");
                     options.addArguments("--start-maximized");
                     options.addArguments("--disable-extensions");
-                    options.addArguments("--remote-allow-origins=*"); // bunu ekledik, tekrar cıkardım.
+                    options.addArguments("--remote-allow-origins=*"); //403 forbidden hatasını engellemek için
                     WebDriverManager.chromedriver().setup();
                     driver=new ChromeDriver(options);
                     break;
