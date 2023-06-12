@@ -26,6 +26,7 @@ public class Driver {
                     options.addArguments("--disable-blink-features");
                     options.addArguments("--start-maximized");
                     options.addArguments("--disable-extensions");
+                    options.addArguments("--remote-allow-origins=*"); // bunu ekledik, tekrar cıkardım.
                     WebDriverManager.chromedriver().setup();
                     driver=new ChromeDriver(options);
                     break;
