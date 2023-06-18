@@ -7,62 +7,47 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-
 import java.time.Duration;
 
 public class Driver {
-    static WebDriver driver;
-
+    //    Driver.getDriver(); -> driver
+    private static WebDriver driver;
+    //    getDriver() is used to instantiate the driver object
     public static WebDriver getDriver() {
         if (driver == null) {
             switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
-                    ChromeOptions options=new ChromeOptions();
-                    options.addArguments("--incognito");//gizli modda çalıştırır
-                    options.addArguments("--ignore-certificate-errors");
-                    options.addArguments("--allow-insecure-localhost");
-                    options.addArguments("--acceptInsecureCerts");
-                    options.addArguments("--disable-blink-features=AutomationControlled");
-                    options.addArguments("--disable-blink-features");
-                    options.addArguments("--start-maximized");
-                    options.addArguments("--disable-extensions");
-                    options.addArguments("--remote-allow-origins=*"); //403 forbidden hatasını engellemek için
+                    ChromeOptions co = new ChromeOptions();
+                    co.addArguments("--remote-allow-origins=*");
                     WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver(options);
-                    break;
-                case "edge":
-                    WebDriverManager.edgedriver().setup();
-                    driver=new EdgeDriver();
+                    driver = new ChromeDriver(co);
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver=new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
-
-                case "headless-chrome":
+                case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver(new ChromeOptions().setHeadless(true));
+                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
-                default:
-                    WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver();
-
+                case "edge":
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
+                    break;
             }
-
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+//            NOTE: sel 4.5
+//            driver = WebDriverManager.chromedriver().create();
         }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+        driver.manage().window().maximize();
         return driver;
     }
 
+    //    closeDriver() is used to close the driver
     public static void closeDriver() {
-        if (driver != null) {
-            driver.close();
-            driver = null;
-        }
-    }
-
-    public static void quitDriver() {
+//        if driver is already being used(pointing an object)
+//        then quit the driver
         if (driver != null) {
             driver.quit();
             driver = null;
